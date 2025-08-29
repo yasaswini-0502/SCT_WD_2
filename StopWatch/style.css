@@ -1,0 +1,91 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  color: #222;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  transition: background 0.5s, color 0.5s;
+}
+
+body.dark {
+  background: #222;
+  color: #f4f4f4;
+}
+
+.container {
+  max-width: 400px;
+  margin: 100px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: background 0.5s;
+}
+
+body.dark .container {
+  background: #333;
+}
+
+#display {
+  font-size: 3rem;
+  margin: 20px 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+#display.animate {
+  transform: scale(1.1);
+}
+
+.buttons button {
+  padding: 10px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background: #007bff;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.buttons button:hover {
+  transform: scale(1.05);
+  background: #0056b3;
+}
+
+body.dark .buttons button {
+  background: #555;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 5px;
+  border-bottom: 1px solid #ddd;
+  opacity: 0;
+  transform: translateX(-20px);
+  animation: fadeSlide 0.4s ease forwards;
+}
+
+body.dark li {
+  border-color: #555;
+}
+
+@keyframes fadeSlide {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+#display {
+  font-size: 2.5rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+#display.animate {
+  transform: scale(1.1);
+}
